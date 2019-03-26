@@ -1,0 +1,37 @@
+<?php
+
+class Vehiculo{
+	
+	//atributos
+	public $color;
+	public $motor=false;
+	public $Velocidad="100km";
+	
+	//metodos
+	public function setColor($color){
+		$this->color=$color;	
+	}
+	public function getColor(){
+		return $this->color;
+	}
+	public function acelerar(){
+		$this->velocidad++;
+    }
+	public function getVelocidad($Velocidad){
+	return $this->Velocidad;
+ }
+}
+
+//clase ford heredada
+class Ford extends Vehiculo{
+	public $modelo;
+	
+}
+	//objeto para instanciar la clase
+$obj= new Vehiculo();
+ //llamado de los metodos
+$obj->setColor("negro");
+echo "color del coche: ".$obj->getColor();
+$obj->acelerar();
+echo " <br> velocidad actual: ".$obj->getVelocidad();
+?>
